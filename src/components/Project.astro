@@ -1,9 +1,158 @@
 ---
-const { title, desc, tech } = Astro.props;
+const { title, type, desc, tech, highlights = [], links = [] } = Astro.props;
+---
+
+<article class="project-card">
+  <header class="project-header">
+    <h3 class="project-title">{title}</h3>
+    {type && <p class="project-type">{type}</p>}
+  </header>
+
+  <section class="project-body">
+    <ul class="project-desc">
+      {desc.map(item => <li>{item}</li>)}
+    </ul>
+
+    {highlights.length > 0 && (
+      <div class="highlights">
+        <div class="mini-label">Highlights</div>
+        <ul>
+          {highlights.map(point => <li>{point}</li>)}
+        </ul>
+      </div>
+    )}
+
+    <div class="mini-label">Technologies & Tools</div>
+    <div class="chips-container">
+      {tech.map(techItem => (
+        <div class="chip">{techItem}</div>
+      ))}
+    </div>
+
+    {links.length > 0 && (
+      <div class="links">
+        {links.map(link => (
+          <a href={link.url} target="_blank" class="project-link">{link.label}</a>
+        ))}
+      </div>
+    )}
+  </section>
+</article>
+<style>
+  .project-card {
+    background: #0f0f13;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+  }
+
+  .project-header {
+    margin-bottom: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff;
+  }
+
+  .project-type {
+    color: #aaa;
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+  }
+
+  .project-body {
+    color: #ddd;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .project-desc {
+    list-style: disc;
+    margin-left: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .highlights {
+    margin-bottom: 1rem;
+  }
+
+  .highlights ul {
+    list-style: square;
+    margin-left: 1.2rem;
+  }
+
+  .mini-label {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .chips-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .chip {
+    background: #1e1e26;
+    border: 1px solid #333;
+    color: #cbd5e1;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    transition: background 0.2s ease;
+  }
+
+  .chip:hover {
+    background: #2d2d3a;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+    float: right;
+  }
+
+  .project-link {
+    background: #48006c;
+    color: white;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    transition: background 0.2s ease;
+  }
+
+  .project-link:hover {
+    background: #48006c;
+  }
+</style>
+
+
+<!-- ---
+const { title, type, desc, tech, highlights, links } = Astro.props;
 ---
 
 <div class="single-item">
   <h3>{title}</h3>
+  {type && <p class="project-type">{type}</p>}
   <div class="project-desc project-desc-list w-richtext">
     <ul role="list">
       {desc.map(item => <li>{item}</li>)}
@@ -13,4 +162,4 @@ const { title, desc, tech } = Astro.props;
   <div class="chips-container">
     {tech.map(techItem => <div class="single-chip">{techItem}</div>)}
   </div>
-</div>
+</div> -->

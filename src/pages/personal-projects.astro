@@ -4,23 +4,38 @@ import Project from '../components/Project.astro';
 import Sidebar from '../components/Sidebar.astro';
 const projects = [
   {
-    title: "TeleJS",
+    title: "Unf0und_VR - Horror VR Experience",
+    type: "Virtual Reality Horror Game",
     desc: [
-      "Built a lightweight, open-source Slack API framework for efficient bot development",
-      "Developed in Node.js and published as an NPM package"
+      "Developed an immersive VR horror experience using Unity and C#.",
+      "Implemented player interactions, environment triggers, and event systems.",
+      "Integrated Oculus SDK and optimized performance for standalone headsets.",
+      "Creation of the gun mechanics; realistic shells, full gun movement, bullet marks.",
+      "Target creation; random movement, scoring system, physics, screamers."
     ],
-    tech: ["Node.js", "NPM"]
-  },
+    highlights: ["Finalist at FPemprèn 14th Edition."],
+    tech: ["Unity", "C#", "Visual Studio 2022", "VR SDK (Oculus)", "Git"],
+    links: [
+    { label: "Trailer", url: "https://youtu.be/YLgMwV56N9U" }
+  ]},
   {
-    title: "pyPrompter",
+    title: "Platform VVV",
+    type: "2D Platformer",
     desc: [
-      "Contributed to a popular open-source Python pip package for building interactive CLIs",
-      "Developed a feature that lets you 'freeze' inquirer choices"
+      "Developed movement, camera control, and level logic using Unity.",
+      "Designed modular scripts for physics interactions and gameplay systems.",
+      "Developed enemies behaviour and obstacles.",
+      "Implemented a fruit system (COINS) for the final screen had open."
     ],
-    tech: ["Python"]
-  },
+    tech: ["Unity", "C#", "Visual Studio 2022", "Git"],
+    links: [
+      { label: "Download Game", url: "https://drive.google.com/drive/u/5/folders/18yH1OBOTZFmr3YfgTZ9AXJ2Y35BuDAET?usp=sharing" },
+      { label: "Gameplay", url: "https://drive.google.com/file/d/1sFwbkx-BeJ8AADU9gG4b_rz6EbSSosPN/view?usp=sharing"}
+
+    ]},
   {
     title: "WebAssetHub",
+    type: "Virtual Reality Horror Game",
     desc: [
       "Created a web scraper tool that monitors digital assets across multiple platforms and offers them at competitive prices",
       "Sold over 700 items"
@@ -33,7 +48,7 @@ const projects = [
 <!DOCTYPE html>
 <html
 >
-  <Header title="Personal Projects | Sam Bernstein" />
+  <Header title="Personal Projects | Raul Cano Portolés" />
   <body>
     <div class="content">
         <Sidebar selectedItem="personal-projects" />
@@ -52,8 +67,11 @@ const projects = [
                     {projects.map(project => (
                       <Project 
                         title={project.title} 
+                        type={project.type}
                         desc={project.desc}
                         tech={project.tech}
+                        highlights={project.highlights}
+                        links={project.links}
                       />
                     ))}
                   </div>

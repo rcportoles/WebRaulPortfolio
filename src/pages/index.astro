@@ -7,7 +7,7 @@ import Sidebar from "../components/Sidebar.astro";
 <!DOCTYPE html>
 <html
 >
-  <Header title="Sam Bernstein" />
+  <Header title="Raul Cano Portolés" />
   <body>
     <div class="content">
       <Sidebar selectedItem="home" />
@@ -25,7 +25,7 @@ import Sidebar from "../components/Sidebar.astro";
               <a href="/projects" class="button w-button">View Portfolio</a>
 
               <!-- Botón que abre el CV en PDF -->
-              <a href="/CV_RaulCano.pdf" class="button w-button">Download CV</a>
+              <a href="/assets/CV_RaulCano.pdf" class="button w-button">Download CV</a>
 
               <!-- Botón que lleva a LinkedIn -->
               <a href="https://www.linkedin.com/in/raul-cano-portol%C3%A9s/" 
@@ -34,7 +34,10 @@ import Sidebar from "../components/Sidebar.astro";
               </a>
 
               <!-- Botón que lleva al email -->
-              <a href="mailto:rcportoles@gmail.com" class="button w-button">Contact Me</a>
+               <a href="mailto:rcportoles@gmail.com?subject=Job%20Opportunity%20-%20Portfolio%20Raul%20Cano&body=Hello%20Raul,%0D%0A%0D%0AI%20saw%20your%20portfolio%20and%20would%20like%20to%20contact%20you%20about...%0D%0A%0D%0ARegards,"
+                class="button w-button">
+                Contact Me
+              </a>
             </div>
           </main>
           <div class="projects-section">
@@ -50,7 +53,11 @@ import Sidebar from "../components/Sidebar.astro";
                 <div class="tech-tools-container">
                   <div class="mini-label-white gray-color">Technologies &amp; Tools</div>
                   <div class="chips-container chips-container-small-width">
-                    <div class="single-chip small-chip">Unity (C#)</div>
+                    <div class="single-chip small-chip">Unity</div>
+                    <div class="single-chip small-chip">C#</div>
+                    <div class="single-chip small-chip">C++</div>
+                    <div class="single-chip small-chip">.NET</div>
+                    <div class="single-chip small-chip">Python</div>
                     <div class="single-chip small-chip">Unreal Engine (C++ / Blueprints)</div>
                     <div class="single-chip small-chip">VR SDKs (Oculus, OpenXR)</div>
                     <div class="single-chip small-chip">Git / GitHub</div>
