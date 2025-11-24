@@ -1,0 +1,90 @@
+---
+import Header from '../components/Header.astro';
+import Sidebar from '../components/Sidebar.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <Header title="About Me | Raul Cano Portolés" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="about" />
+      <main class="main">
+  <div class="container about-visual">
+
+    <!-- HERO -->
+    <section class="about-hero">
+      <h1>About Me</h1>
+      <p class="about-tagline">
+        Game developer focused on building video games, interactive systems, and immersive experiences.
+      </p>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="about-timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>How It Started</h3>
+          <p>
+            I started programming because I really liked video games, and from there I became curious about how they worked inside. What began as curiosity soon turned into a passion for building applications, video games, mechanics, and interactive experiences.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>My Training & Focus</h3>
+          <p>
+            I specialized in video game programming using Unity and Unreal Engine, thanks to the training I received from my professors and internship mentors, who actively used these tools. I focused on gameplay programming, virtual reality experiences, and performance-focused design.
+          </p>
+          <p>
+            I enjoy taking complex ideas and breaking them down into something simple and scalable.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>How I Work</h3>
+          <p>
+            I consider myself disciplined and detail-oriented. I like to prototype ideas, test new mechanics, take mechanics and ideas from other games and make them myself, and tweak them until the system is harmonious and feels satisfying to use.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>My Goal</h3>
+          <p>
+            My goal is to grow as a professional video game developer and contribute to projects that fulfill me and connect technology and creativity.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- VALUES / DRIVES -->
+    <section class="about-values">
+      <h3>What Drives Me</h3>
+
+      <div class="values-grid">
+        <div class="value-card">Curiosity</div>
+        <div class="value-card">Discipline</div>
+        <div class="value-card">Creativity</div>
+        <div class="value-card">Problem Solving</div>
+        <div class="value-card">Continuous Learning</div>
+        <div class="value-card">Gameplay Design</div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+    </div>
+  </body>
+</html>

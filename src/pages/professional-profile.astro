@@ -18,81 +18,78 @@ import "../components/profile.css";
             </a>
           </div>
 
-          <div class="profile-page">
-            <div class="profile-header">
-                <img src="/assets/raul.png" alt="Raul Cano Portolés" class="profile-avatar" />
-                <div class="profile-info">
-                <h1>Raul Cano Portolés</h1>
-                <h2>Game & Software Developer</h2>
-                <p class="profile-summary">
-                    Passionate about creating immersive and interactive experiences using Unity, Unreal Engine, C#, and C++. 
-                    I combine creativity and technical expertise to deliver efficient, scalable, and engaging gameplay systems.
-                </p>
-                </div>
+          
+            <div class="profile-header" id="profileHeader" >
+              <img src="/assets/raul.png" alt="Raul Cano Portolés" class="profile-avatar data-cell-item" data-animation-direction="down"/>
+              <div class="profile-info">
+                  <h1 class="data-cell-item" data-animation-direction="right">Raul Cano Portolés</h1>
+                  <h2 class="data-cell-item" data-animation-direction="right">Game & Software Developer</h2>
+                  <p class="profile-summary data-cell-item" data-animation-direction="up">
+                      Passionate about creating immersive and interactive experiences using Unity, Unreal Engine, C#, and C++. 
+                      I combine creativity and technical expertise to deliver efficient, scalable, and engaging gameplay systems.
+                  </p>
+              </div>
             </div>
-
-            <section class="profile-section">
-                <h3>Core Skills</h3>
-                <div class="profile-skills">
-                <span class="profile-skill">Unity</span>
-                <span class="profile-skill">Unreal Engine 5</span>
-                <span class="profile-skill">C#</span>
-                <span class="profile-skill">C++</span>
-                <span class="profile-skill">.NET</span>
-                <span class="profile-skill">VR SDK</span>
-                <span class="profile-skill">Git</span>
-                <span class="profile-skill">Agile Dev</span>
-                </div>
-            </section>
-
-            <section class="profile-section">
-                <h3>Career Objectives</h3>
-                <p class="profile-objectives">
-                I aim to join a creative studio or development team focused on innovative gameplay mechanics, 
+            <section class="profile-section" id="sectionObjectives">
+              <h3>Career Objectives</h3>
+              <p class="profile-objectives data-cell-item" data-animation-direction="up">
+                 I aim to join a creative studio or development team focused on innovative gameplay mechanics, 
                 VR experiences, or software development with strong technical challenges. 
                 Open to opportunities in Spain (Barcelona/Tarragona), Dubai, EEUU and remote positions.
-                </p>
+              </p>
+            </section>
+
+            <section class="profile-section" id="sectionSkills">
+                <h3>Core Skills</h3>
+                <div class="profile-skills">
+                <span class="profile-skill data-cell-item" data-animation-direction="left">Unity</span>
+                <span class="profile-skill data-cell-item" data-animation-direction="left">Unreal Engine 4</span>
+                <span class="profile-skill data-cell-item" data-animation-direction="left">Unreal Engine 5</span>
+                <span class="profile-skill data-cell-item" data-animation-direction="left">C#</span>
+                <span class="profile-skill data-cell-item" data-animation-direction="right">C++</span>
+                <span class="profile-skill data-cell-item" data-animation-direction="right">.NET</span>
+                <span class="profile-skill data-cell-item" data-animation-direction="right">VR SDK</span>
+                <span class="profile-skill data-cell-item" data-animation-direction="right">Git</span>
+                <span class="profile-skill data-cell-item" data-animation-direction="right">Agile Dev</span>
+                </div>
             </section>
           </div>
         </div>
       </nav>
     </div>
-    <script type="module">
-  // Safe init: espera al DOM si es necesario
-  (function () {
-    const initObserver = () => {
-      const nodes = Array.from(document.querySelectorAll('.profile-header, .profile-section'));
-      if (!nodes.length) {
-        console.warn('[Profile] No elements found for animation. Check class names.');
-        return;
-      }
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Selecciona TODOS los elementos a animar
+    const elementsToAnimate = document.querySelectorAll(
+      '.profile-header, .profile-section, .data-cell-item'
+    );
 
-      // Si IntersectionObserver no está soportado -> mostramos todo
-      if (typeof IntersectionObserver === 'undefined') {
-        nodes.forEach(n => n.classList.add('visible'));
-        return;
-      }
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            // opcional: dejar de observar después de que aparezca
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
-
-      nodes.forEach(el => observer.observe(el));
-      console.log('[Profile] IntersectionObserver initialized. Observing', nodes.length, 'elements.');
+    // 2. Opciones del Intersection Observer
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -100px 0px', // -100px para que se active antes de llegar al final
+      threshold: 0.05 // Se activa cuando el 5% del elemento es visible
     };
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initObserver);
-    } else {
-      initObserver();
-    }
-  })();
+    // 3. Callback del observador
+    const intersectionCallback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Añade la clase 'visible' para activar la animación CSS
+          entry.target.classList.add('visible');
+          // Deja de observar el elemento, solo se anima una vez
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    // 4. Crea y ejecuta el observador
+    const observer = new IntersectionObserver(intersectionCallback, observerOptions);
+
+    elementsToAnimate.forEach(element => {
+      observer.observe(element);
+    });
+  });
 </script>
 
   </body>

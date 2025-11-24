@@ -860,3 +860,148 @@ p {
   transform: translateY(-2px);
 }
 }
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.skill-card {
+  background-color: rgba(28, 28, 28, 0.9);
+  border: 1px solid #353535;
+  border-radius: 16px;
+
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.skills-category {
+  background-color: rgba(28, 28, 28, 0.85);
+  border: 1px solid #353535;
+  border-radius: 16px;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.single-chip {
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  cursor: default;
+}
+
+.single-chip:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+  background-color: #404040;
+}
+.skills-category:hover h3 {
+  color: #cfcfff;
+}
+
+.skills-category:hover {
+  border-color: #4a4a88;
+}
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about-card {
+  background-color: rgba(28, 28, 28, 0.9);
+  border: 1px solid #353535;
+  border-radius: 16px;
+  padding: 28px 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.about-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.about-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.about-hero {
+  text-align: left;
+}
+
+.about-tagline {
+  font-size: 18px;
+  color: #a8a8a8;
+  max-width: 520px;
+}
+
+.about-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.timeline-content {
+  background: rgba(28, 28, 28, 0.9);
+  border: 1px solid #353535;
+  border-radius: 16px;
+  padding: 20px 24px;
+}
+
+.about-values {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.value-card {
+  background: rgba(28, 28, 28, 0.9);
+  border: 1px solid #353535;
+  border-radius: 14px;
+  text-align: center;
+  padding: 16px 12px;
+  font-family: "IBM Plex Mono", monospace;
+  color : #b1afaf;
+}
