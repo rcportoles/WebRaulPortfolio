@@ -57,6 +57,20 @@ const { selectedItem } = Astro.props;
         <div>Professional Profile</div>
       </a>
       <a
+        href="/experience"  data-astro-reload
+        class={`nav-link-container w-inline-block ${
+          selectedItem === 'experience' ? 'w--current' : ''
+        }`}
+      >
+        <img
+          src="/assets/experience.svg"
+          loading="eager"
+          alt=""
+          class="nav-link-image"
+        />
+        <div>Experience/Background</div>
+      </a>
+      <a
         href="/personal-projects"
         class={`nav-link-container w-inline-block ${
           selectedItem === 'personal-projects' ? 'w--current' : ''

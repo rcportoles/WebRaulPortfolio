@@ -219,22 +219,6 @@
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  /* ELIMINAR O COMENTAR ESTAS LÍNEAS PARA EL HEADER BASE */
-  /* opacity: 0; */
-  /* transform: translateY(30px); */
-  /* transition: opacity 0.8s ease, transform 0.8s ease; */
-  
-  /* Asegura que no haya animación en el contenedor */
-  opacity: 1; /* Hacemos que el contenedor sea visible inmediatamente */
-  transform: translateY(0);
-}
-/* ELIMINAR O COMENTAR ESTO TAMBIÉN */
-/* .profile-header.visible {
   opacity: 1;
   transform: translateY(0);
-} */
-
-/* AHORA, USAREMOS LA CLASE GENERAL PARA ANIMAR LOS HIJOS DEL HEADER */
-
-/* Asegúrate de que los estilos `.data-cell-item` del mensaje anterior estén presentes */
-/* (Ver Paso 1 del mensaje anterior para la clase .data-cell-item) */
+}

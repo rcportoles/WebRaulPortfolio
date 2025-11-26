@@ -1,4 +1,67 @@
 ---
+import Header from '../components/Header.astro';
+import Sidebar from '../components/Sidebar.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <Header title="Professional Profile | Raul Cano Portolés" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="professional-profile" />
+
+      <main class="main">
+        <div class="container profile-container">
+
+          <h1>Professional Profile</h1>
+
+          <!-- INTRO -->
+          <div class="profile-card">
+            <p class="profile-intro">
+              I’m a junior game developer focused on creating interactive systems, gameplay mechanics, and immersive experiences.
+              I enjoy working at the intersection of technology and creativity, translating ideas into functional and engaging systems.
+            </p>
+          </div>
+
+          <!-- CORE APPROACH -->
+          <div class="profile-card">
+            <h3>How I Work</h3>
+            <p>
+              I approach development with a problem-solving mindset, focusing on clean, scalable code and structured systems.
+              I like to prototype, test, iterate, and refine mechanics until they feel intuitive and satisfying.
+            </p>
+          </div>
+
+          <!-- FOCUS AREAS -->
+          <div class="profile-card">
+            <h3>Main Focus</h3>
+            <div class="chips-container">
+              <div class="single-chip">Gameplay Programming</div>
+              <div class="single-chip">VR Experiences</div>
+              <div class="single-chip">Interactive Systems</div>
+              <div class="single-chip">Performance-Oriented Design</div>
+            </div>
+          </div>
+
+          <!-- GOALS -->
+          <div class="profile-card">
+            <h3>Professional Goals</h3>
+            <p>
+              My goal is to grow as a video game developer and contribute to meaningful projects that combine technical depth with creative vision.
+              I’m looking for opportunities where I can continue learning and adding value to a development team.
+            </p>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
+
+
+
+
+<!-- ---
 import Header from "../components/Header.astro";
 import Sidebar from "../components/Sidebar.astro";
 import "../components/profile.css"; 
@@ -93,4 +156,4 @@ import "../components/profile.css";
 </script>
 
   </body>
-</html>
+</html> -->

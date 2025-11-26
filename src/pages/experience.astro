@@ -1,0 +1,106 @@
+---
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
+import "../components/experience-background.css";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <Header title="Experience Background | Raul Cano Portolés" />
+  <body>
+    <div class="content">
+      <!-- Sidebar integrado correctamente -->
+      <Sidebar selectedItem="experience" />
+
+      <main class="main">
+        <div class="container experience-container">
+
+          <h1>Experience Background</h1>
+          <p class="lead">My professional and technical journey as a software and video game developer.</p>
+
+          <!-- WORK EXPERIENCE -->
+          <section class="experience-section">
+            <h2>Work Experience</h2>
+
+            <div class="experience-card">
+              <h3>Interactive Applications & Video Game Developer</h3>
+              <span class="experience-meta">Ping Pong Tech · Sept 2022 – June 2023</span>
+              <ul>
+                <li>Unity software development for exhibitions and museums</li>
+                <li>AI camera integration for face and body detection</li>
+                <li>NAS data migration and temporary administration</li>
+                <li>CI/CD build automation with cloud services</li>
+                <li>Internal Unity tools for designers (balancers, content pooling generators)</li>
+              </ul>
+            </div>
+
+            <div class="experience-card">
+              <h3>IT Technician</h3>
+              <span class="experience-meta">Institut de l’Arboç · Sept 2020 – May 2021</span>
+              <ul>
+                <li>Hardware repair and device installation</li>
+                <li>Windows and Linux OS installation</li>
+                <li>Server administration and maintenance</li>
+                <li>System restoration using Deep Freeze</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- EDUCATION -->
+          <section class="experience-section">
+            <h2>Education</h2>
+
+            <div class="experience-card">
+              <h3>Higher Degree in Multimedia Applications & Video Games</h3>
+              <span class="experience-meta">Institut Pedralbes · 2019 – 2021</span>
+              <p>2D, 3D and VR Development · Unity · Unreal Engine</p>
+            </div>
+
+            <div class="experience-card">
+              <h3>CISCO CCNA 1 Certification</h3>
+              <span class="experience-meta">Eugeni D'Ors · 2020</span>
+            </div>
+
+            <div class="experience-card">
+              <h3>Vocational Training – Microcomputer Systems and Networks</h3>
+              <span class="experience-meta">Eugeni d'Ors · 2018 – 2020</span>
+              <p>Network Configuration · Hardware Maintenance · Operating Systems</p>
+            </div>
+          </section>
+
+          <!-- HIGHLIGHTED PROJECTS -->
+          <section class="experience-section">
+            <h2>Highlighted Projects</h2>
+
+            <div class="experience-card">
+              <h3><a class="experience-link" href="/personal-projects#:~:text=Unf0und_VR%20%2D%20Horror%20VR%20Experience">Unf0und VR</a></h3>
+              <p>VR paranormal experience developed in Unity using C#.</p>
+              <span class="experience-meta">Finalist – 14th FPemprèn edition</span>
+            </div>
+
+            <div class="experience-card">
+              <h3><a class="experience-link" href="/personal-projects#:~:text=Demo%20Playable%20Horror%20Game">Demo Playable Horror Game</a></h3>
+              <p>FP Horror Game · Character creation</p>
+            </div>
+
+            <div class="experience-card">
+              <h3><a class="experience-link" href="/personal-projects#:~:text=Demo%20Slot%20Machine">Demo Slot Machine</a></h3>
+              <p>Modular betting application · Fully customizable and adjustable</p>
+            </div>
+          </section>
+
+          <!-- PROFESSIONAL SUMMARY -->
+          <section class="experience-section">
+            <h2>Professional Summary</h2>
+            <p class="experience-card">
+              I am a Video Game and Software Developer focused on Unity, Unreal Engine, and C++ development.
+              I have experience building interactive experiences, internal developer tools, and scalable game systems.
+              I value clean architecture, performance optimization, and adaptable workflows.
+            </p>
+          </section>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
