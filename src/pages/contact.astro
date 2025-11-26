@@ -1,0 +1,51 @@
+---
+import Header from '../components/Header.astro';
+import Sidebar from '../components/Sidebar.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <Header title="Contact | Raul Cano Portolés" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="contact" />
+
+      <main class="main">
+        <div class="container contact-container">
+
+          <h1>Contact</h1>
+
+          <p class="lead">
+            I’m currently open to junior opportunities, remote or onsite in Barcelona / Tarragona.
+          </p>
+
+          <div class="contact-card">
+
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a href="mailto:rcportoles@gmail.com?subject=Job%20Opportunity%20-%20Portoles%20Raul%20Cano&body=Hello%20Raul,%0D%0A%0D%0AI%20saw%20your%20portfolio%20and%20would%20like%20to%20contact%20you%20about...%0D%0A%0D%0ARegards," class="contact-link">
+                rcportoles@gmail.com
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/raul-cano-portoles/" target="_blank" class="contact-link">
+                linkedin.com/in/raul-cano-portoles/
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/calaveiraUwU" target="_blank" class="contact-link">
+                github.com/calaveiraUwU
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -43,23 +43,6 @@ const { selectedItem } = Astro.props;
         <div>Home</div>
       </a>
       <a
-        href="/software-development"
-        class={`nav-link-container w-inline-block ${
-          selectedItem === 'software-development' ? 'w--current' : ''
-        }`}
-        aria-current={
-          selectedItem === 'software-development' ? 'page' : undefined
-        }
-      >
-        <img
-          src="/assets/code.svg"
-          loading="eager"
-          alt=""
-          class="nav-link-image"
-        />
-        <div>Software development</div>
-      </a>
-      <a
         href="/professional-profile"  data-astro-reload
         class={`nav-link-container w-inline-block ${
           selectedItem === 'professional-profile' ? 'w--current' : ''
@@ -114,6 +97,20 @@ const { selectedItem } = Astro.props;
           class="nav-link-image"
         />
         <div>About me</div>
+      </a>
+      <a
+        href="/contact"
+        class={`nav-link-container w-inline-block ${
+          selectedItem === 'contact' ? 'w--current' : ''
+        }`}
+      >
+        <img
+          src="/assets/contact.svg"
+          loading="eager"
+          alt=""
+          class="nav-link-image"
+        />
+        <div>Contact</div>
       </a>
     </nav>
 
