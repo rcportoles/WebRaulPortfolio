@@ -1,4 +1,18 @@
 ---
+import ProjectGalleryClient from "./ProjectGalleryClient.jsx";
+const { media = [] } = Astro.props;
+---
+
+<ProjectGalleryClient
+  media={media}
+  client:load
+/>
+
+
+
+
+
+<!-- ---
 import ProjectGalleryClient from './ProjectGalleryClient.jsx';
 const { media } = Astro.props; 
 // media = [{ type: "image" | "video", src: "..." }, ...]
@@ -8,10 +22,10 @@ const { title, type, desc, tech, highlights = [], links = [] } = Astro.props;
 <ProjectGalleryClient media={media} client:load />
 
 <div class="single-item">
-    <!-- {media.length > 0 && <ProjectGalleryClient client:load media={media} />} -->
+   {media.length > 0 && <ProjectGalleryClient client:load media={media} />} -->
 
-  <h3>{title}</h3>
-  {type && <p class="project-type">{type}</p>}
+  <!-- <h3>{title}</h3> -->
+  <!-- {type && <p class="project-type">{type}</p>} -->
   <!-- <div class="project-desc project-desc-list w-richtext">
     <ul role="list">
       {desc.map(item => <li>{item}</li>)}
@@ -22,4 +36,4 @@ const { title, type, desc, tech, highlights = [], links = [] } = Astro.props;
   <div class="chips-container">
     {tech.map(techItem => <div class="single-chip">{techItem}</div>)}
   </div> -->
-</div>
+<!-- </div> -->

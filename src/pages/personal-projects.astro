@@ -7,10 +7,9 @@ import ProjectGallery from '../components/ProjectGallery.astro';
 const projects = [
   {
     media: [
-      
-      { type: 'image', src: '/assets/media/unfound/portada.jpeg' },
-      { type: 'video', src: '/assets/media/unfound/Trailer.mp4' },
-      { type: 'video', src: '/assets/media/unfound/Gameplay.mp4' }
+      "A_RYdP7n0f0",
+      "/assets/media/unfound/portada.jpeg",
+      "22U-uYY680Y"      
     ],
     title: "Unf0und_VR - Horror VR Experience",
     type: "Virtual Reality Horror Game",
@@ -28,8 +27,8 @@ const projects = [
   ]},
   {
     media: [
-      { type: 'video', src: '/assets/media/Demo/DemoRaul.mp4' },
-      { type: 'image', src: '/assets/media/Demo/Character.png'}
+      "joAiHeWMkI4",
+      "/assets/media/Demo/Character.png"
     ],
     title: "Demo Playable Horror Game",
     type: "FP Horror Game",
@@ -46,14 +45,14 @@ const projects = [
       "Character creation from 0 to 100 (Mobility, Mechanics, Inventory, Animations...)"
     ],
     links: [
-      { label: "Download Demo", url: '/assets/media/Demo/DemoBuild.zip' }
+      { label: "Download Demo", url: 'https://drive.google.com/file/d/1r0LZUui4I9ahnYY4PB7RhcijXTzSPjLv/view?usp=drive_link' }
     ]
   },
   {
     media: [
-      { type: 'video', src: '/assets/media/SlotMachine/GameplaySlotMachine.mp4' },
-      { type: 'video', src: '/assets/media/SlotMachine/LineConfig.mp4' },
-      { type: 'image', src: '/assets/media/SlotMachine/SlotMachineLogic.png'}
+      "fh9uet9cFwo",
+      "jHpfMKgei0I",
+      "/assets/media/SlotMachine/SlotMachineLogic.png"
     ],
     title: "Demo Slot Machine",
     type: "Modular betting application",
@@ -71,7 +70,7 @@ const projects = [
   },
   {
     media: [
-      { type: 'video', src: '/assets/media/InventarioApp/InventoryApp.mp4' },
+      "vBHSOM_ipKs",
     ],
     title: "Online shopping list",
     type: "Web application",
@@ -91,8 +90,8 @@ const projects = [
   },
   {
     media: [
-      { type: 'video', src: '/assets/media/TinyRun3D/TinyRun3D_GamePlay.mp4'},
-      { type: 'image', src: '/assets/media/TinyRun3D/Controls.png'}
+      "p603Yg47fxw",
+      "/assets/media/TinyRun3D/Controls.png"
     ],
     title: "TinyRun 3D",
     type: "Tiny Run Cyberpunk with Scoreboard",
@@ -104,13 +103,13 @@ const projects = [
     ],
     tech: ["Unity", "C#", "Visual Studio 2022", "Git", "SQL", "Java", "Sockets"],
     links: [
-      { label: "Download Project", url: '/assets/media/TinyRun3D/TinyRun3D.zip' },
-      { label: "Download Server", url: '/assets/media/TinyRun3D/ServerJavaScoreboard.zip'}
+      { label: "Download Project", url: 'https://drive.google.com/drive/folders/1x8Mzs8ReTYjjWtQ14IzI4gzU6bdd8oQb?usp=drive_link' },
+      { label: "Download Server", url: 'https://drive.google.com/drive/folders/18T3c07yekXQzNpZmH1V_wf-7HT5nYzMB?usp=drive_link'}
     ]
   },
   {
     media: [
-      { type: 'video', src: '/assets/media/PlatformVVV/GameplayVVV.mp4' }
+      "b8A8jWl_Wg0"
     ],
     title: "Platform VVV",
     type: "2D Platformer",
@@ -122,13 +121,12 @@ const projects = [
     ],
     tech: ["Unity", "C#", "Visual Studio 2022", "Git"],
     links: [
-      { label: "Download Game", url: "https://drive.google.com/drive/u/5/folders/18yH1OBOTZFmr3YfgTZ9AXJ2Y35BuDAET?usp=sharing" },
-      { label: "Gameplay", url: "https://drive.google.com/file/d/1sFwbkx-BeJ8AADU9gG4b_rz6EbSSosPN/view?usp=sharing"}
+      { label: "Download Game", url: "https://drive.google.com/drive/u/5/folders/18yH1OBOTZFmr3YfgTZ9AXJ2Y35BuDAET?usp=sharing" }
 
     ]},
   {
     media: [
-      { type: 'image', src: '/assets/media/Millennium Falcon/fm.avif'}
+      "/assets/media/Millennium Falcon/fm.avif"
     ],
     title: "Millennium Falcon",
     type: "TPS Starship Simulation Multiplayer",
@@ -137,7 +135,7 @@ const projects = [
     ],
     tech: ["Unreal Engine 4", "C++", "Visual Studio 2022", "Git", "Blueprints"],
     links: [
-      { label: "Download Project", url: '/assets/media/Millennium Falcon/FalconMilenialUnrealEngineCPP.rar' }
+      { label: "Download Project", url: 'https://drive.google.com/file/d/1j-MAVL1h6YVQIllTVuSPpuHESkFKtoZL/view?usp=drive_link' }
     ]
   },
   
@@ -164,13 +162,13 @@ const projects = [
             <section class="items-container">
               <div class="resouce-items">
                 {projects.map(project => (
-                  <div class="project-wrapper">
-                    <ProjectGallery media={project.media} />
+                  <div class="project-card">
                     <Project
-                        title={project.title} 
+                        title={project.title}
                         type={project.type}
                         desc={project.desc}
                         tech={project.tech}
+                        media={project.media}
                         highlights={project.highlights}
                         links={project.links}
                       />
